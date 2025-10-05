@@ -2,8 +2,7 @@ package mate.academy
 
 object LetterRemover {
     @JvmStatic
-    fun removeLetter(input: String) = input
-        .lowercase()
-        .map { if (it == 'r') '!' else it }
-        .toCharArray()
+    fun removeLetter(text: String): CharArray {
+        return text.lowercase().replace("r", "!").toCharArray()
+    }
 }
